@@ -1,5 +1,9 @@
 - hosts: localhost
   become: true
   tasks:
-  - name: Install htop
-    apt: name=htop
+  - name: Install Packages
+    apt: name={{items}}
+    with_items:
+      - htop
+      - google-chrome-stable
+      - virtualbox
