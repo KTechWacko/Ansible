@@ -2,4 +2,10 @@
   become: true
   tasks:
   - name: Install Packages
-    apt: name=['htop','google-chrome-stable','virtualbox','gnome-tweaks']
+    apt:
+      pkg:
+        - htop
+        - google-chrome-stable
+        - virtualbox
+        - gnome-tweaks
+      state: present
